@@ -1,10 +1,22 @@
 {
-  "welcome": "Welcome to the Calculator!",
-  "firstNumber": "What is the first number?",
-  "invalidNumber": "Hmmm...that doesn't look like a valid number",
-  "secondNumber": "What is the second number?",
-  "operation": "Enter a number 1-4 to indicate which operation you would like to perform:\n1) Add\n2) Subtract\n3) Multiply\n4) Divide",
-  "invalidOp": "Must enter a number: 1, 2, 3, or 4.",
-  "playAgain": "Would you like to play again? Y/N: ",
-  "yN": "Must enter Y/N: "
+  "en": {
+    "welcome": "Welcome to the Calculator!",
+    "firstNumber": "What is the first number?",
+    "invalidNumber": "Hmmm...that doesn't look like a valid number",
+    "secondNumber": "What is the second number?",
+    "operation": "Enter a number 1-4 to indicate which operation you would like to perform:\n1) Add\n2) Subtract\n3) Multiply\n4) Divide",
+    "invalidOp": "Must enter a number: 1, 2, 3, or 4.",
+    "playAgain": "Would you like to play again? Y/N: ",
+    "yN": "Must enter Y/N: "
+  },
+  "es": {
+    "welcome": "Bienvenidx a La Calculadora!",
+    "firstNumber": "¿Cuál es el primer número?",
+    "invalidNumber": "Hmmmm...Eso no es un número válido.",
+    "secondNumber": "¿Cuál es el segundo número?",
+    "operation": "Entra un número 1-4 para indicar la operación deasada:\n1) Añadir\n2) Sustraer\n3) Multiplicar\n4) Dividir",
+    "invalidOp": "Hay qué entrar un número: 1, 2, 3, or 4.",
+    "playAgain": "¿Quieres jugar otra vez?: Y o N",
+    "yN": "Hay que entrar Y/N: "
+  }
 }

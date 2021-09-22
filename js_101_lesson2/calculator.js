@@ -18,32 +18,39 @@ function invalidNumber(num) {
 
 let calculating = true;
 
-prompt(MESSAGES["welcome"]);
+prompt("Choose English or Spanish. Type 'en' or 'es': ");
+let language = readline.question();
+
+while (!['en', 'es'].includes(language)) {
+  prompt(MESSAGES["Enter 'en' or 'es': "]);
+  language = readline.question();
+}
+
+prompt(MESSAGES[`${language}`]["welcome"]);
 
 while (calculating) {
 
-  prompt(MESSAGES["firstNumber"]);
+  prompt(MESSAGES[`${language}`]["firstNumber"]);
 
   let number1 = Number(readline.question());
 
   while (invalidNumber(number1)) {
-    prompt(MESSAGES["invalidNumber"]);
     number1 = readline.question();
   }
 
-  prompt(MESSAGES["secondNumber"]);
+  prompt(MESSAGES[`${language}`]["secondNumber"]);
   let number2 = Number(readline.question());
 
   while (invalidNumber(number2)) {
-    prompt(MESSAGES["invalidNumber"]);
+    prompt(MESSAGES[`${language}`]["invalidNumber"]);
     number2 = readline.question();
   }
 
-  prompt(MESSAGES["operation"]);
+  prompt(MESSAGES[`${language}`]["operation"]);
   let operation = readline.question();
 
   while (!['1', '2', '3', '4'].includes(operation)) {
-    prompt(MESSAGES["invalidOp"]);
+    prompt(MESSAGES[`${language}`]["invalidOp"]);
     operation = readline.question();
   }
 
@@ -68,12 +75,12 @@ while (calculating) {
 
   console.log("Your result is: " + output);
 
-  prompt(MESSAGES["playAgain"]);
+  prompt(MESSAGES[`${language}`]["playAgain"]);
 
   let playAgain = readline.question();
 
   while (!['y', 'n'].includes(playAgain.toLowerCase())) {
-    prompt(MESSAGES["yN"]);
+    prompt(MESSAGES[`${language}`]["yN"]);
     playAgain = readline.question();
   }
 
