@@ -19,12 +19,11 @@ function displayWinner(choice, computerChoice) {
     prompt("It's a tie!");
   }
 }
+function prompt(message) {
+  console.log(`=> ${message}`);
+}
 
 while (true) {
-
-  function prompt(message) {
-    console.log(`=> ${message}`);
-  }
 
   prompt(`Choose one: ${VALID_CHOICES.join(', ')}`);
   let playerChoice = readline.question();
