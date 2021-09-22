@@ -51,6 +51,10 @@ function prompt(message) {
   console.log(`=> ${message}`);
 }
 
+function displayBreakLine() {
+  console.log("================================================");
+}
+
 let playing = true;
 let noWinner;
 
@@ -85,7 +89,7 @@ while (playing) {
       noWinner = false;
     } else {
       displayScore(playerScore, computerScore);
-      prompt("");
+      displayBreakLine();
     }
   }
   prompt('Do you want to play again (y/n)?');
