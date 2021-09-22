@@ -8,8 +8,8 @@ const VALID_CHOICES = ['rock', 'paper', 'scissors', 'lizard', 'Spock'];
 
 const VALID_INITIALS = ['r', 'p', 's', 'l', 'S'];
 
-let playerScore = 0;
-let computerScore = 0;
+let playerScore;
+let computerScore;
 
 function updateScores(choice, computerChoice) {
   if ((choice === 's' && (computerChoice === 'p' || computerChoice === 'l')) ||
@@ -52,7 +52,7 @@ function prompt(message) {
 }
 
 let playing = true;
-let noWinner = true;
+let noWinner;
 
 while (playing) {
 
@@ -60,16 +60,16 @@ while (playing) {
   computerScore = 0;
   noWinner = true;
   console.clear();
+  prompt(`Welcome to the game!\nChoose one: ${VALID_CHOICES.join(', ')}\nType only the first initial of your\
+  choice: r, p, s, l, S.\nNote that Spock is a capital S.\nThe first player to 3 wins!\n`);
 
   while (noWinner) {
 
-    prompt(`Choose one: ${VALID_CHOICES.join(', ')}\n \
-    Type only the first initial of your choice: r, p, s, l, S.\n \
-    Note that Spock is a capital S.`);
+    prompt(`Choose one: ${VALID_CHOICES.join(', ')}`);
     let playerChoice = readline.question();
 
     while (!VALID_INITIALS.includes(playerChoice)) {
-      prompt("Hmmm. That doesn't look like a valid choice. Try again!");
+      prompt("Hmmm. Type r, p, s, l, or S. Try again!");
       playerChoice = readline.question();
     }
 
