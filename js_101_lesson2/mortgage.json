@@ -1,0 +1,11 @@
+{
+  "welcome": "Welcome to the Mortgage Calculator!",
+  "loanAmount": "What is your loan amount? Enter a whole number: ",
+  "invalidAmount": "Hmmm...that doesn't look like a valid loan amount.",
+  "aPR": "What is the APR? Enter as a percent, for example, '3.25'",
+  "invalidAPR": "Hmmm...that doesn't look like a valid APR.",
+  "loanDuration": "Enter the number of years your loan will last. Don't use any punctuation.",
+  "invalidDuration": "Hmmm...that doesn't look like a valid loan duration.",
+  "calculateAgain": "Would you like make another calculation? Y/N: ",
+  "yN": "Must enter Y/N: "
+}
