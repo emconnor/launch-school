@@ -30,44 +30,103 @@
 //   }
 // }
 
-function substrings(str) {
-  let result = [];
-  let startingIndex = 0;
+// function substrings(str) {
+//   let result = [];
+//   let startingIndex = 0;
 
-  while (startingIndex <= str.length - 2) {
-    let numChars = 2;
-    while (numChars <= str.length - startingIndex) {
-      let substring = str.slice(startingIndex, startingIndex + numChars);
-      result.push(substring);
-      numChars += 1;
-    }
+//   while (startingIndex <= str.length - 2) {
+//     let numChars = 2;
+//     while (numChars <= str.length - startingIndex) {
+//       let substring = str.slice(startingIndex, startingIndex + numChars);
+//       result.push(substring);
+//       numChars += 1;
+//     }
 
-    startingIndex += 1;
-  }
+//     startingIndex += 1;
+//   }
 
-  return result;
-}
+//   return result;
+// }
 
-function isPalindrome(str) {
-  return str === str.split("").reverse().join("");
-}
+// function isPalindrome(str) {
+//   return str === str.split("").reverse().join("");
+// }
 
-function palindromeSubstrings(str) {
-  let result = [];
-  let substringsArr = substrings(str);
+// function palindromeSubstrings(str) {
+//   let result = [];
+//   let substringsArr = substrings(str);
 
-  substringsArr.forEach(substring => {
-    if (isPalindrome(substring)) {
-      result.push(substring);
-    }
-  });
+//   substringsArr.forEach(substring => {
+//     if (isPalindrome(substring)) {
+//       result.push(substring);
+//     }
+//   });
 
-  return result;
-}
+//   return result;
+// }
 
-console.log(palindromeSubstrings("supercalifragilisticexpialidocious"));
-console.log(substrings("abcddcbA"));
+// console.log(palindromeSubstrings("supercalifragilisticexpialidocious"));
+// console.log(substrings("abcddcbA"));
 // console.log(palindromeSubstrings("palindrome"));
 // console.log(palindromeSubstrings(""));
 
+// function selectFruit(obj) {
 
+//   let fruitObject = {};
+//   Object.entries(obj).forEach(([key, value]) => {
+//     if (value === 'Fruit') {
+//       fruitObject[key] = value;
+//     }
+//   });
+//   return fruitObject;
+// }
+
+// let produce = {
+//   apple: 'Fruit',
+//   carrot: 'Vegetable',
+//   pear: 'Fruit',
+//   broccoli: 'Vegetable'
+// };
+
+// console.log(selectFruit(produce));
+// let myNumbers = [1, 4, 3, 7, 2, 6];
+// doubleNumbers(myNumbers); // => [2, 8, 6, 14, 4, 12]
+// console.log(myNumbers);                // => [1, 4, 3, 7, 2, 6]
+
+// function doubleNumbers(numbers) {
+//   let counter = 0;
+//   while (counter < numbers.length) {
+//     numbers[counter] *= 2;
+//     counter += 1;
+//   }
+// }
+
+// function doubleOddIndices(numbers) {
+//   let doubledNums = [];
+//   for (let counter = 0; counter < numbers.length; counter += 1) {
+//     let currentNumber = numbers[counter];
+//     if (counter % 2 === 1) {
+//       doubledNums.push(currentNumber * 2);
+//     } else {
+//       doubledNums.push(currentNumber);
+//     }
+//   }
+//   return doubledNums;
+// }
+
+// let myNumbers = [1, 4, 3, 7, 2, 6];
+// let newNums = doubleOddIndices(myNumbers);  // => [2, 4, 6, 14, 2, 6]
+
+// console.log(newNums);
+
+// function multiplyBy(array, num) {
+//   let result = [];
+//   for (let i = 0; i < array.length; i++) {
+//     result.push(array[i] * num);
+//   }
+//   return result;
+// }
+
+// let myNumbers = [1, 4, 3, 7, 2, 6];
+// let newNums = multiplyBy(myNumbers, 3);
+// console.log(newNums);
