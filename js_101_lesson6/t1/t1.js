@@ -17,7 +17,6 @@ let playerHand = [];
 let computerHand = [];
 let playerScore = 0;
 let computerScore = 0;
-let winner = false;
 
 /* prompt function */
 function prompt(msg) {
@@ -26,20 +25,20 @@ function prompt(msg) {
 
 /* add cards to deck; helper function for initializeCards() */
 function addCard(card, num) {
-  for (let i = 0; i < num; i++) {
+  for (let index = 0; index < num; index++) {
     deck.push(card);
   }
 }
 
 /* initialize deck */
 function initializeCards() {
-  for (let i = 1; i < 11; i++) {
-    if (i == 1) {
+  for (let index = 1; index < 11; index++) {
+    if (index === 1) {
       addCard('A', 4);
       continue;
     }
-    if (i < 10) {
-      addCard(i, 4);
+    if (index < 10) {
+      addCard(index, 4);
     } else {
       addCard('J', 4);
       addCard('Q', 4);
@@ -48,22 +47,17 @@ function initializeCards() {
   }
 }
 
-/* clear deck */
-function clearDeck() {
-  deck.splice(0, deck.length);
-}
-
 /* shuffle deck */
 function shuffle() {
-  for (let i = 0; i < deck.length; i++) {
-    let randomIndex = Math.floor(Math.random() * (i + 1));
-    [deck[i], deck[randomIndex]] = [deck[randomIndex], deck[i]];
+  for (let index = 0; index < deck.length; index++) {
+    let randomIndex = Math.floor(Math.random() * (index + 1));
+    [deck[index], deck[randomIndex]] = [deck[randomIndex], deck[index]];
   }
 }
 
 /* deal two cards to each player */
 function deal() {
-  for (let i = 0; i < 2; i++) {
+  for (let index = 0; index < 2; index++) {
     playerHand.push(deck.shift());
     computerHand.push(deck.shift());
   }
@@ -168,18 +162,20 @@ function initialMessage() {
 }
 /* show player hand */
 function showPlayerHand() {
-  prompt(`Your cards are: ${playerHand.join(', ')}`)
+  prompt(`Your cards are: ${playerHand.join(', ')}`);
 }
 /* show computer card */
 function showComputerCard() {
-  randomIndex = Math.floor(Math.random() * computerHand.length)
+  let randomIndex = Math.floor(Math.random() * computerHand.length);
   prompt(`Computer card: ${computerHand[randomIndex]}`);
 }
+
 /* function to start game */
 function begin() {
+  //let begin;
   while (true) {
     prompt('Press enter to begin');
-    let begin = readline.question();
+    readline.question();
     console.clear();
     break;
   }
@@ -195,9 +191,9 @@ function displayWinnerAfterBust() {
 
 function displayWinnerAfterGame() {
   if (playerScore > computerScore && computerScore < playerScore) {
-    prompt(`You won by ${playerScore - computerScore} points!`)
+    prompt(`You won by ${playerScore - computerScore} points!`);
   } else if (playerScore < computerScore && computerScore > playerScore) {
-    prompt(`Computer won with ${computerScore - playerScore} points!`)
+    prompt(`Computer won with ${computerScore - playerScore} points!`);
   } else {
     prompt(`It's a tie!`);
   }
@@ -238,15 +234,11 @@ while (true) {
     if (busted()) break;
     dealerTurn();
     if (computerBusted()) break;
-    displayWinnerAfterGame(); break;
+    displayWinnerAfterGame();
+    break;
 
   }
 
   if (!playAgain()) break;
 
 }
-
-
-
-
-
